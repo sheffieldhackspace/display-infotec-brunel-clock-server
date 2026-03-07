@@ -105,8 +105,8 @@ void loop() {
   }
 
   widget.render();
-  widget.advanceFrame();
   display.display();
+  widget.advanceFrame();
 
   if (millis() - last >= 5000) {
     Serial.printf("Free: %dB, Min free: %dB\n", ESP.getFreeHeap(), ESP.getMinFreeHeap());
