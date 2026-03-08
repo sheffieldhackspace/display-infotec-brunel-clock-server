@@ -1,6 +1,6 @@
-# Train Station Clocks
+# display-infotec-brunel-clock-server
 
-The clocks in the space. See also Nottingham Hackspace's wiki:
+Information server for the Infotec brunel clock display in the hackspace. See also Nottingham Hackspace's wiki:
 
 <https://wiki.nottinghack.org.uk/wiki/BigClocks>
 
@@ -10,7 +10,7 @@ The clocks in the space. See also Nottingham Hackspace's wiki:
 
 ## Hardware
 
-The microcontroller is a Seeed Studio XIAO ESP32C3. For hardware details, schematic, and PCB layout, see the [AEGMIS_GV60 repository](https://github.com/sheffieldhackspace/AEGMIS_GV60).
+The microcontroller is a Seeed Studio XIAO ESP32C3. For hardware details, schematic, and PCB layout, see the [display-infotec-brunel-clock repository](https://github.com/sheffieldhackspace/display-infotec-brunel-clock).
 
 ## Running the project
 
@@ -23,7 +23,7 @@ The microcontroller is a Seeed Studio XIAO ESP32C3. For hardware details, schema
 Flash the server environment to the device:
 
 ```bash
-$ pio run -t clean -t upload -e aegmis
+$ pio run -t clean -t upload -e hardware
 ```
 
 To run on an SSD1306 OLED display instead, use the `oled` environment:
@@ -91,5 +91,5 @@ $ chmod +x integration-test.sh && ./integration-test.sh 192.168.1.100
 ### Included libraries
 
 * Adafruit GFX Library - The base for our implementation
-* [AEGMIS_GV60](https://github.com/sheffieldhackspace/AEGMIS_GV60) - Provides an Adafruit GFX compatible driver for the train sign display; based on the reverse engineering work of [`daniel1111`](https://github.com/daniel1111/BigClockSnake) from the Nottingham Hackspace
-* DotWidget - Provides a standard way of building a display widget for small IoT screens
+* [Brunel Clock](https://github.com/sheffieldhackspace/display-infotec-brunel-clock-server) - Provides an Adafruit GFX compatible driver for the train sign display; based on the reverse engineering work of [`daniel1111`](https://github.com/daniel1111/BigClockSnake) from the Nottingham Hackspace
+* [Dot Widget](https://github.com/dredzik/dot-widget) - Provides a standard way of building a display widget for small IoT screens
