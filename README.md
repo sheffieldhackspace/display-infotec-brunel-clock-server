@@ -41,12 +41,6 @@ For wiring the OLED, connect it to the XIAO ESP32C3 as follows:
 | SDA     | D4           |
 | SCL     | D5           |
 
-### Generation of compatible image data
-
-```bash
-$ ./icons/image2bytes.py ./icons/skull.gif
-```
-
 ### Setting the status of the display
 
 Once flashed, the display will show its IP address. You can then control it via HTTP:
@@ -79,6 +73,12 @@ $ curl http://ip_address:port/ --data '{
 | `image` | string | `""` | Base64-encoded image (output of the image2bytes script). |
 | `image_width` | integer | `0` | Image width in pixels. |
 | `image_height` | integer | `0` | Image height in pixels. |
+
+### Generation of compatible image data
+
+```bash
+$ ./icons/image2bytes.py ./icons/skull.gif
+```
 
 ### Integration tests
 
